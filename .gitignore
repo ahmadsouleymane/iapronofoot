@@ -64,3 +64,6 @@ build-archive.log
 /test-results/
 /playwright-report/
 /playwright/.cache/
+
+# git worktrees (superpowers:using-git-worktrees)
+/.worktrees/

@@ -1,0 +1,10 @@
+{
+  "xgboost_test_accuracy": 0.5065676756139349,
+  "xgboost_test_log_loss": 1.002956509590149,
+  "baseline_test_accuracy": 0.44031981724728725,
+  "test_matches": 1751,
+  "lstm_test_accuracy": 0.49571673329525984,
+  "lstm_test_log_loss": 1.0193936824798584,
+  "blended_test_accuracy": 0.5065676756139349,
+  "blended_test_log_loss": 1.0040310621261597
+}

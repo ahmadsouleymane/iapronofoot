@@ -100,6 +100,8 @@
     "meta_title": "Tableau de bord IAProNoFoot",
     "meta_description": "Consultez vos pronostics IA, gérez vos crédits Mobile Money et suivez vos parrainages.",
     "home": "Accueil",
+    "credits": "Crédits",
+    "referral": "Parrainage",
     "members": "Membres",
     "settings": "Réglages"
   },
@@ -112,11 +114,18 @@
     "max_message": "Ou, besoin d'une stack d'auth auto-hébergée (Better Auth) ? Essayez <url></url>."
   },
   "DashboardBillingPage": {
-    "title_bar": "Facturation",
-    "title_bar_description": "Gérez votre abonnement",
-    "subscribe_button": "S'abonner",
-    "current_plan_button": "Plan actuel",
-    "manage_subscription_button": "Gérer mon abonnement"
+    "title_bar": "Crédits",
+    "title_bar_description": "Solde actuel : {balance} crédits"
+  },
+  "CreditPackCard": {
+    "price_fcfa": "{price} FCFA",
+    "credits_amount": "{credits} crédits",
+    "buy_button": "Acheter"
+  },
+  "DashboardReferralPage": {
+    "title_bar": "Parrainage",
+    "title_bar_description": "Invitez vos proches et gagnez des crédits ensemble",
+    "share_instructions": "Partagez ce lien : chaque filleul qui achète un pack vous rapporte des crédits bonus, à vous deux."
   },
   "UserProfilePage": {
     "title_bar": "Profil utilisateur",

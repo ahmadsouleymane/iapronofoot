@@ -1,12 +1,9 @@
 import { auth } from '@clerk/nextjs/server';
-import { eq } from 'drizzle-orm';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { buttonVariants } from '@/components/ui/buttonVariants';
-import { PricingCard } from '@/features/billing/PricingCard';
+import { CreditPackCard } from '@/features/credits/CreditPackCard';
 import { TitleBar } from '@/features/dashboard/TitleBar';
-import { db } from '@/libs/DB';
-import { subscriptionSchema } from '@/models/Schema';
-import { AllPlans } from '@/utils/PricingPlans';
+import { getActiveCreditPacks } from '@/libs/CreditPacks';
+import { getBalance } from '@/libs/Credits';
 
 export default async function DashboardBillingPage(props: {
   params: Promise<{ locale: string }>;
@@ -19,39 +16,16 @@ export default async function DashboardBillingPage(props: {
   });
 
   const { userId } = await auth();
-  const [subscription] = userId
-    ? await db
-        .select()
-        .from(subscriptionSchema)
-        .where(eq(subscriptionSchema.ownerId, userId))
-        .limit(1)
-    : [];
-
-  if (subscription?.status === 'active' && subscription.customerPortalUrl) {
-    return (
-      <>
-        <TitleBar
-          title={t('title_bar')}
-          description={t('title_bar_description')}
-        />
-
-        <a
-          className={buttonVariants({ size: 'sm' })}
-          href={subscription.customerPortalUrl}
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          {t('manage_subscription_button')}
-        </a>
-      </>
-    );
-  }
+  const [balance, packs] = await Promise.all([
+    userId ? getBalance(userId) : Promise.resolve(0),
+    getActiveCreditPacks(),
+  ]);
 
   return (
     <>
       <TitleBar
         title={t('title_bar')}
-        description={t('title_bar_description')}
+        description={t('title_bar_description', { balance })}
       />
 
       <div className="
@@ -60,27 +34,8 @@ export default async function DashboardBillingPage(props: {
         @4xl:grid-cols-3
       "
       >
-        {AllPlans.map(plan => (
-          <PricingCard
-            key={plan.name}
-            plan={plan}
-            button={
-              plan.lemonSqueezyVariantId
-                ? (
-                    <a
-                      className={buttonVariants({ size: 'sm', className: 'w-full' })}
-                      href={`/api/checkout?variantId=${plan.lemonSqueezyVariantId}`}
-                    >
-                      {t('subscribe_button')}
-                    </a>
-                  )
-                : (
-                    <span className={buttonVariants({ size: 'sm', className: 'w-full', variant: 'secondary' })}>
-                      {t('current_plan_button')}
-                    </span>
-                  )
-            }
-          />
+        {packs.map(pack => (
+          <CreditPackCard key={pack.id} pack={pack} />
         ))}
       </div>
     </>

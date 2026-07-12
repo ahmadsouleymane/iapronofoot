@@ -85,12 +85,22 @@
     "settings": "Settings"
   },
   "DashboardIndexPage": {
-    "title_bar": "Dashboard",
-    "title_bar_description": "Welcome to your dashboard",
-    "message_state_title": "Let's get started",
-    "message_state_description": "Customize this page by editing the file at <code>dashboard/page.tsx</code>.",
-    "message_state_alternative": "Need advanced features? Next.js 16 & React 19, Multi-tenancy & Teams, Roles & Permissions, Shadcn UI,\nEnd-to-End Typesafety with oRPC, Stripe Payment, Light / Dark mode. Try <url></url>.",
-    "max_message": "Or, need a Self-hosted auth stack (Better Auth)? Try <url></url>."
+    "title_bar": "Predictions",
+    "title_bar_description": "Pick a league and date, then spend 1 credit to see the AI prediction for a match"
+  },
+  "PredictionsBoard": {
+    "balance_label": "Balance: {balance} credits",
+    "no_credits_cta": "Buy credits",
+    "loading": "Loading matches...",
+    "error": "Could not load matches right now.",
+    "empty": "No matches available for this date.",
+    "predict_button": "See prediction (1 credit)",
+    "predicting": "Calculating...",
+    "prediction_error": "The prediction could not be calculated. Your credit was refunded.",
+    "confidence_label": "Confidence: {confidence}%",
+    "outcome_home": "Home win",
+    "outcome_draw": "Draw",
+    "outcome_away": "Away win"
   },
   "DashboardBillingPage": {
     "title_bar": "Credits",

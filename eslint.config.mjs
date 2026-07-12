@@ -31,6 +31,7 @@ export default antfu(
     ignores: [
       '.alchemy/**/*',
       'migrations/**/*',
+      'scripts/**/*',
 
       // explicitly allow .claude
       '!.claude/',

@@ -3,7 +3,7 @@
   "configurations": [
     {
       "name": "iapronofoot-dev",
-      "runtimeExecutable": "npm",
+      "runtimeExecutable": "C:\\Program Files\\nodejs\\npm.cmd",
       "runtimeArgs": ["run", "dev:next"],
       "port": 3000
     }

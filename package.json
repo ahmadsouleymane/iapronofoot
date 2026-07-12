@@ -127,5 +127,19 @@
     "plugins": {
       "@tailwindcss/postcss": {}
     }
+  },
+  "allowScripts": {
+    "esbuild@0.27.7": true,
+    "esbuild@0.18.20": true,
+    "esbuild@0.25.12": true,
+    "esbuild@0.28.1": true,
+    "@parcel/watcher@2.5.6": true,
+    "@sentry/cli@2.58.6": true,
+    "@swc/core@1.15.41": true,
+    "bufferutil@4.1.0": true,
+    "core-js@3.47.0": true,
+    "lefthook@2.1.9": true,
+    "sharp@0.34.5": true,
+    "utf-8-validate@6.0.6": true
   }
 }

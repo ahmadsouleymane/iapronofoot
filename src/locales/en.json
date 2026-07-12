@@ -100,6 +100,8 @@
     "meta_title": "IAProNoFoot Dashboard",
     "meta_description": "View your AI predictions, manage your Mobile Money credits, and track your referrals.",
     "home": "Home",
+    "credits": "Credits",
+    "referral": "Referral",
     "members": "Members",
     "settings": "Settings"
   },
@@ -112,11 +114,18 @@
     "max_message": "Or, need a Self-hosted auth stack (Better Auth)? Try <url></url>."
   },
   "DashboardBillingPage": {
-    "title_bar": "Billing",
-    "title_bar_description": "Manage your subscription",
-    "subscribe_button": "Subscribe",
-    "current_plan_button": "Current plan",
-    "manage_subscription_button": "Manage subscription"
+    "title_bar": "Credits",
+    "title_bar_description": "Current balance: {balance} credits"
+  },
+  "CreditPackCard": {
+    "price_fcfa": "{price} FCFA",
+    "credits_amount": "{credits} credits",
+    "buy_button": "Buy"
+  },
+  "DashboardReferralPage": {
+    "title_bar": "Referral",
+    "title_bar_description": "Invite people you know and earn credits together",
+    "share_instructions": "Share this link: every referred friend who buys a pack earns bonus credits for both of you."
   },
   "UserProfilePage": {
     "title_bar": "User Profile",

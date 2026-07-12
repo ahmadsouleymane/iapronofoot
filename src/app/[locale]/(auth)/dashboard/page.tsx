@@ -1,6 +1,7 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { PageMessage } from '@/features/dashboard/PageMessage';
 import { TitleBar } from '@/features/dashboard/TitleBar';
+import { ReferralLinker } from '@/features/referral/ReferralLinker';
 import { SponsorLogos } from '@/features/sponsors/SponsorLogos';
 
 export default async function DashboardIndexPage(props: {
@@ -15,6 +16,7 @@ export default async function DashboardIndexPage(props: {
 
   return (
     <>
+      <ReferralLinker />
       <TitleBar
         title={t('title_bar')}
         description={t('title_bar_description')}

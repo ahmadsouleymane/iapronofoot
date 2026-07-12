@@ -85,12 +85,22 @@
     "settings": "Réglages"
   },
   "DashboardIndexPage": {
-    "title_bar": "Tableau de bord",
-    "title_bar_description": "Bienvenue sur votre tableau de bord",
-    "message_state_title": "Commençons",
-    "message_state_description": "Personnalisez cette page en modifiant le fichier dans <code>dashboard/page.tsx</code>.",
-    "message_state_alternative": "Besoin de fonctionnalités avancées ? Next.js 16 & React 19, Multi-tenancy & Équipes, Rôles & Permissions, Shadcn UI,\nTypesafety de bout en bout avec oRPC, Paiement Stripe, Mode clair / sombre. Essayez <url></url>.",
-    "max_message": "Ou, besoin d'une stack d'auth auto-hébergée (Better Auth) ? Essayez <url></url>."
+    "title_bar": "Pronostics",
+    "title_bar_description": "Choisissez un championnat et une date, puis dépensez 1 crédit pour voir le pronostic IA d'un match"
+  },
+  "PredictionsBoard": {
+    "balance_label": "Solde : {balance} crédits",
+    "no_credits_cta": "Acheter des crédits",
+    "loading": "Chargement des matchs...",
+    "error": "Impossible de charger les matchs pour le moment.",
+    "empty": "Aucun match disponible pour cette date.",
+    "predict_button": "Voir le pronostic (1 crédit)",
+    "predicting": "Calcul en cours...",
+    "prediction_error": "Le pronostic n'a pas pu être calculé. Votre crédit a été remboursé.",
+    "confidence_label": "Confiance : {confidence}%",
+    "outcome_home": "Victoire domicile",
+    "outcome_draw": "Match nul",
+    "outcome_away": "Victoire extérieure"
   },
   "DashboardBillingPage": {
     "title_bar": "Crédits",

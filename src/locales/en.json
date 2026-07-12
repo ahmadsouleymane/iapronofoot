@@ -36,29 +36,8 @@
   },
   "Pricing": {
     "section_subtitle": "Pricing",
-    "section_title": "Unlock the Full Potential of the SaaS Template",
-    "section_description": "A free and open-source landing page template for your SaaS business, built with React, TypeScript, Shadcn UI, and Tailwind CSS.",
-    "button_text": "Get started"
-  },
-  "PricingPlans": {
-    "free_plan_name": "Free",
-    "premium_plan_name": "Premium",
-    "enterprise_plan_name": "Enterprise"
-  },
-  "PricingCard": {
-    "free_plan_description": "For individuals",
-    "premium_plan_description": "For small teams",
-    "enterprise_plan_description": "For industry leaders",
-    "plan_price": "${price}",
-    "plan_interval_month": "/ month",
-    "plan_interval_year": "/ year"
-  },
-  "PricingFeatures": {
-    "feature_team_member": "Up to {number} team members",
-    "feature_website": "Up to {number} websites",
-    "feature_storage": "{number} GB of storage",
-    "feature_transfer": "{number} TB of transfer",
-    "feature_email_support": "Email support"
+    "section_title": "Choose your credit pack",
+    "section_description": "1 credit = 1 AI prediction. Buy the pack that fits you, no subscription required."
   },
   "SponsorLogos": {
     "sponsored_by": "Sponsored by",

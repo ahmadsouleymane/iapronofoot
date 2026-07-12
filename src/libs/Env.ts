@@ -8,6 +8,8 @@ export const Env = createEnv({
     LEMONSQUEEZY_API_KEY: z.string().optional(),
     LEMONSQUEEZY_STORE_ID: z.string().optional(),
     LEMONSQUEEZY_WEBHOOK_SECRET: z.string().optional(),
+    PREDICTION_API_URL: z.string().optional(),
+    PREDICTION_API_KEY: z.string().optional(),
   },
   client: {
     NEXT_PUBLIC_APP_URL: z.string().optional(),
@@ -26,6 +28,8 @@ export const Env = createEnv({
     LEMONSQUEEZY_API_KEY: process.env.LEMONSQUEEZY_API_KEY,
     LEMONSQUEEZY_STORE_ID: process.env.LEMONSQUEEZY_STORE_ID,
     LEMONSQUEEZY_WEBHOOK_SECRET: process.env.LEMONSQUEEZY_WEBHOOK_SECRET,
+    PREDICTION_API_URL: process.env.PREDICTION_API_URL,
+    PREDICTION_API_KEY: process.env.PREDICTION_API_KEY,
     NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL,
     NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY:
       process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY,

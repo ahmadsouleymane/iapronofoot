@@ -63,20 +63,3 @@ export const referralSchema = pgTable('referral', {
   bonusGranted: boolean('bonus_granted').notNull().default(false),
   createdAt: timestamp('created_at', { mode: 'date' }).defaultNow().notNull(),
 });
-
-export const subscriptionSchema = pgTable('subscription', {
-  id: serial('id').primaryKey(),
-  ownerId: text('owner_id').notNull(),
-  lemonsqueezyCustomerId: text('lemonsqueezy_customer_id').notNull(),
-  lemonsqueezySubscriptionId: text('lemonsqueezy_subscription_id').notNull(),
-  lemonsqueezyVariantId: text('lemonsqueezy_variant_id').notNull(),
-  status: text('status').notNull(),
-  renewsAt: timestamp('renews_at', { mode: 'date' }),
-  endsAt: timestamp('ends_at', { mode: 'date' }),
-  customerPortalUrl: text('customer_portal_url'),
-  updatedAt: timestamp('updated_at', { mode: 'date' })
-    .defaultNow()
-    .$onUpdate(() => new Date())
-    .notNull(),
-  createdAt: timestamp('created_at', { mode: 'date' }).defaultNow().notNull(),
-});

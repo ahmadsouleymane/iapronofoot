@@ -1,12 +1,11 @@
-import { useTranslations } from 'next-intl';
-import { buttonVariants } from '@/components/ui/buttonVariants';
-import { PricingCard } from '@/features/billing/PricingCard';
+import { getTranslations } from 'next-intl/server';
+import { CreditPackCard } from '@/features/credits/CreditPackCard';
 import { Section } from '@/features/landing/Section';
-import { Link } from '@/libs/I18nNavigation';
-import { AllPlans } from '@/utils/PricingPlans';
+import { getActiveCreditPacks } from '@/libs/CreditPacks';
 
-export const Pricing = () => {
-  const t = useTranslations('Pricing');
+export const Pricing = async () => {
+  const t = await getTranslations('Pricing');
+  const packs = await getActiveCreditPacks();
 
   return (
     <Section
@@ -20,22 +19,8 @@ export const Pricing = () => {
         @4xl:grid-cols-3
       "
       >
-        {AllPlans.map(plan => (
-          <PricingCard
-            key={plan.name}
-            plan={plan}
-            button={(
-              <Link
-                className={buttonVariants({
-                  size: 'sm',
-                  className: 'w-full',
-                })}
-                href="/sign-up"
-              >
-                {t('button_text')}
-              </Link>
-            )}
-          />
+        {packs.map(pack => (
+          <CreditPackCard key={pack.id} pack={pack} />
         ))}
       </div>
     </Section>

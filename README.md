@@ -49,9 +49,3 @@ npm run start    # lance le serveur en production
 CI/CD : GitHub Actions déjà configuré dans `.github/workflows/` (CI, releases). La revue de sécurité automatique tourne sur chaque PR via `.github/workflows/security-review.yml`.
 
 Déploiement recommandé : Vercel (zero-config pour Next.js) ou tout hébergeur Node compatible, avec une base Postgres (Neon recommandé par le boilerplate d'origine).
-
----
-
-## 👤 Auteur
-
-**Ahmad Souleymane** — [@ahmadsouleymane](https://github.com/ahmadsouleymane)

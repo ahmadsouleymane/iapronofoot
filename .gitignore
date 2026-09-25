@@ -67,3 +67,8 @@ build-archive.log
 
 # git worktrees (superpowers:using-git-worktrees)
 /.worktrees/
+
+# env files (purged from history — do not commit real secrets)
+.env
+.env.*
+!.env.example
